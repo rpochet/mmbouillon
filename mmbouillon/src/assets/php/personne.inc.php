@@ -10,7 +10,7 @@
       </div>
     </div>
     <div class="profile-card-about">
-      <h5 class="about-title separator-left">About Me</h5>
+      <h5 class="about-title separator-left">Spécialitées</h5>
       <p class="about-content">
         <?php echo $personne->description ?>
       </p>

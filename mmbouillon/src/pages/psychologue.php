@@ -4,19 +4,6 @@ $personnes = require 'assets/php/personnes.php';
 
 <h3>Les psychologues / psychothérapeutes</h3>
 <p>Nos psychologues et psychothérapeutes vous reçoivent à la Maison Médicale sur rendez-vous. Ils vous offrent une écoute, un soutien, un environnement bienveillant… dans le cadre de difficultés affectives, familiales, de couple, d’anxiété, de dépendance, de burn-out, de problèmes liés à la parentalités, à l’adolescence…</p> 
-<p>Nos psychologues, psychothérapeutes :</p>
-
-<ul>
-<?php
-foreach ($personnes as $personne) {
-    if($personne->type == 'Psychologue') {
-?>
-<li><?php echo $personne->title ?> <?php echo $personne->firstName ?><span> <?php echo $personne->lastName ?></span> : <?php echo $personne->description_courte ?></li> 
-<?php
-    }
-}
-?>
-</ul>
 
 <?php
 foreach ($personnes as $personne) {
