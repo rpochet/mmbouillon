@@ -4,30 +4,13 @@ $personnes = require 'assets/php/personnes.php';
 
 <h3>La sage-femme</h3>
 <p>Notre sage-femme est à l’écoute, prodigue des soins et conseils tout au long de la grossesse ainsi qu’après l’arrivée du bébé. Elle apporte un soutien à la parentalité et à l’allaitement. Elle vous reçoit sur rendez-vous à la Maison Médicale ou à votre domicile.</p>
-<p>Notre sage-femme :</p>
-
-<ul>
-<?php
-foreach ($personnes as $personne) {
-    if($personne->type == 'SageFemme') {
-?>
-<li><?php echo $personne->title ?> <?php echo $personne->firstName ?><span><?php echo $personne->lastName ?></span></li> 
-<?php
-    }
-}
-?>
-</ul>
 
 <h4>Prestataire</h4> 
 <?php
 foreach ($personnes as $personne) {
     if($personne->type == 'SageFemme') {
 ?>
-<?php echo $personne->firstName ?><span><?php echo $personne->lastName ?></span> : <?php echo $personne->gsm ?>
-Spécialités :
-<p>
-<?php echo $personne->description ?>
-</p>
+<?php include('assets/php/personne.inc.php'); ?>
 <?php
     }
 }

@@ -17,49 +17,40 @@
       <div class="row about-skills">
         <div class="small-6 columns">
           <ul class="arrow">
-            <li>Coding</li>
-            <li>Cricket</li>
-            <li>Enjoying</li>
-          </ul>
-        </div>
-        <div class="small-6 columns">
-          <ul class="arrow">
-            <li>Maths</li>
-            <li>Dancing</li>
-            <li>Smiling</li>
+            <?php
+            foreach ($personne->specialites as $skill) {
+            ?>
+            <li><?php echo $skill ?></li>
+            <?php
+            }
+            ?>
           </ul>
         </div>
       </div>
     </div>
     <div class="profile-card-action">
       <div class="action-area">
-        <a href="#" class="action-anchor has-tip bottom" data-tooltip aria-haspopup="true" data-disable-hover="false" tabindex="2" title="Like Harry Profile">
-          <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
-          <span class="show-for-sr">Like Harry Profile</span>
+        <a href="#" class="action-anchor has-tip bottom" data-tooltip aria-haspopup="true" data-disable-hover="false" tabindex="2" title="Ajouter à mon carnet d'adresse">
+          <i class="fas fa-address-card" aria-hidden="true"></i>
+          <span class="show-for-sr">Ajouter à mon carnet d'adresse</span>
         </a>
       </div>
       <div class="action-area">
-        <a href="#" class="action-anchor has-tip bottom" data-tooltip aria-haspopup="true" data-disable-hover="false" tabindex="2" title="Comment on Harry Profile">
-          <i class="fa fa-comments-o" aria-hidden="true"></i>
-          <span class="show-for-sr">Comment on Harry Profile</span>
+        <a href="#" class="action-anchor has-tip bottom" data-tooltip aria-haspopup="true" data-disable-hover="false" tabindex="2" title="Envoyer un message">
+          <i class="fas fa-envelope" aria-hidden="true"></i>
+          <span class="show-for-sr">Envoyer un message</span>
         </a>
       </div>
       <div class="action-area">
-        <a href="#" class="action-anchor has-tip bottom" data-tooltip aria-haspopup="true" data-disable-hover="false" tabindex="2" title="Add Harry as a Friend">
-          <i class="fa fa-user-plus" aria-hidden="true"></i>
-          <span class="show-for-sr">Add Harry as a Friend</span>
+        <a href="#" class="action-anchor has-tip bottom" data-tooltip aria-haspopup="true" data-disable-hover="false" tabindex="2" title="Like">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+          <span class="show-for-sr">Like</span>
         </a>
       </div>
       <div class="action-area">
-        <a href="#" class="action-anchor has-tip bottom" data-tooltip aria-haspopup="true" data-disable-hover="false" tabindex="2" title="Send Harry a Gift">
-          <i class="fa fa-gift" aria-hidden="true"></i>
-          <span class="show-for-sr">Send Harry a Gift</span>
-        </a>
-      </div>
-      <div class="action-area">
-        <a href="#" class="action-anchor has-tip bottom" data-tooltip aria-haspopup="true" data-disable-hover="false" tabindex="2" title="Block Harry!">
-          <i class="fa fa-ban" aria-hidden="true"></i>
-          <span class="show-for-sr">Block Harry!</span>
+        <a href="#" class="action-anchor has-tip bottom" data-tooltip aria-haspopup="true" data-disable-hover="false" tabindex="2" title="Téléphoner">
+          <i class="fas fa-phone" aria-hidden="true"></i>
+          <span class="show-for-sr">Téléphoner</span>
         </a>
       </div>
     </div>

@@ -24,6 +24,8 @@ class Personne
     
     public $description;
     
+    public $specialites;
+    
     public $extra;
     
 }

@@ -90,7 +90,12 @@ $aaerts->firstName = 'Audrey';
 $aaerts->lastName = 'Aerts';
 $aaerts->gsm = '0474/41.46.38';
 $aaerts->photo = 'https://dummyimage.com/200x200/ccc/fff&text=Audrey+Aerts';
-$aaerts->description = 'Accompagnement global pour une grossesse et une maternité harmonieuse.<br />Accompagne dans le désir de grossesse dès le désir de conception jusqu\'au 1er anniversaire de l\’enfant.<br />Suivi médical de grossesse conjointement avec le gynécologue. Réalisation de diverses préparations à la naissance.<br />Suivi post-partum, soutien à l\'allaitement et la parentalité.';
+$aaerts->specialites =  array(
+    'Accompagnement global pour une grossesse et une maternité harmonieuse.',
+    'Accompagne dans le désir de grossesse dès le désir de conception jusqu\'au 1er anniversaire de l\’enfant.',
+    'Suivi médical de grossesse conjointement avec le gynécologue. Réalisation de diverses préparations à la naissance.',
+    'Suivi post-partum, soutien à l\'allaitement et la parentalité.'
+);
 
 return array($mmaluta, $vanizet, $mmassin, $jleyder, $cdelfosse, $pcharo, $wbarras, $aaerts);
 

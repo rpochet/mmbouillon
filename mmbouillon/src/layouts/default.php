@@ -22,6 +22,8 @@ $lastSegment = basename(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
     
     <title><?php echo $labels['title'];?></title>
     
+    <script defer src="https://use.fontawesome.com/releases/v5.0.1/js/all.js"></script>
+    
     <link rel="stylesheet" href="{{root}}assets/css/app.css">
     
 <!--     <script src="javascripts/modernizr.foundation.js"></script> -->
@@ -98,12 +100,12 @@ $lastSegment = basename(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
                       <li class="main-nav-link <?php echo ($lastSegment == 'kinesitherapeute.php' ? 'active' : '');?>"><a href="kinesitherapeute.php"><?php echo $labels['kinesitherapeute.title'];?></a></li>
                     </ul>
                   </div>
-                  <div class="shrink column">
-                    <ul class="menu">
-                      <li><input type="search" placeholder="Search"></li>
-                      <li><button type="button" class="button search-button"></button></li>
-                    </ul>
-                  </div>
+<!--                   <div class="shrink column"> -->
+<!--                     <ul class="menu"> -->
+<!--                       <li><input type="search" placeholder="Search"></li> -->
+<!--                       <li><button type="button" class="button search-button"></button></li> -->
+<!--                     </ul> -->
+<!--                   </div> -->
                 </div>
               </div>
             
@@ -117,17 +119,14 @@ $lastSegment = basename(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
                 <div class="mmbouillon-header-mobile-center">
                   <a href="#"><img class="logo" src="https://placehold.it/130x30"></a>
                 </div>
-                <div class="mmbouillon-header-mobile-right">
-                  <i class="fa fa-shopping-cart"></i>
-                </div>
+<!--                 <div class="mmbouillon-header-mobile-right"> -->
+<!--                   <i class="fa fa-shopping-cart"></i> -->
+<!--                 </div> -->
               </div>
             </div>
 
             <div class="row">
                 <div class="twelve columns">
-                    <ul id="menu3" class="footer_menu horizontal">
-                        <li class=""><a href="index.html">Home</a></li>
-                    </ul>
 
                     {{!-- Pages you create in the src/pages/ folder are inserted here
                     when the flattened page is created. --}} {{> body}}
