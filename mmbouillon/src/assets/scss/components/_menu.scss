@@ -1,0 +1,239 @@
+@import 'foundation';
+
+.mmbouillon-header {
+  width: 100%;
+  background-color: $white;
+
+  .logo {
+    height: 50px;
+    width: 160px;
+  }
+
+  ul {
+    background-color: $white;
+  }
+
+  li {
+    display: inline-block;
+  }
+
+  .nav-links {
+    margin-left: 15px;
+  }
+
+  a {
+    color: $dark-gray;
+    transition: color 0.5s ease;
+    display: block;
+  }
+
+  a:hover {
+    color: darken($dark-gray, 50%);
+    transition: color 0.5s ease;
+  }
+
+  input {
+    margin-right: 0px;
+
+    @include breakpoint(large down) {
+      width: 150px;
+    }
+  }
+
+  &.top-bar {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .button.search-button {
+    width: 39px;
+    height: 39px;
+    background-size: 20px 20px;
+    background-image: url("https://placehold.it/20x20");
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding-left: 0;
+    padding-right: 0;
+    border-radius: 0px;
+  }
+
+  .menu > .main-nav-link > a {
+    padding: 1.0em 0.85em 1.0em 0.85em;
+  }
+}
+
+
+.mmbouillon-header-top {
+  width: 100%;
+  background-color: darken($dark-gray,20%);
+  height: 40px;
+  padding: 8px 20px 10px 20px;
+
+  .fa {
+    color: $white;
+    font-size: 1.5rem;
+  }
+}
+
+.mmbouillon-header-top-message {
+  color: lighten($dark-gray, 100%);
+  float: left;
+}
+
+.mmbouillon-header-top-links {
+  color: lighten($dark-gray, 100%);
+
+  ul li {
+    display: inline;
+    padding-left: 20px;
+  }
+
+  a {
+    color: lighten($dark-gray, 50%);
+    transition: color 0.5s ease;
+  }
+
+  a:hover {
+    color: lighten($dark-gray, 100%);
+    transition: color 0.5s ease;
+  }
+}
+
+.mmbouillon-header-off-canvas {
+  background-color: darken($dark-gray,20%);
+
+  .menu {
+    padding: 1rem 0;
+  }
+
+  .menu a {
+    color: $dark-gray;
+  }
+}
+
+.mmbouillon-header-mobile {
+  background-color: darken($dark-gray,20%);
+  display: flex;
+  padding: rem-calc(10) rem-calc(20);
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mmbouillon-header-mobile-left,
+.mmbouillon-header-mobile-right,
+.mmbouillon-header-mobile-center {
+  flex: 1 0 0;
+}
+
+.mmbouillon-header-mobile-left {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.mmbouillon-header-mobile-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mmbouillon-header-mobile-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  .fa {
+    color: $white;
+    font-size: 1.5rem;
+  }
+}
+
+.mmbouillon-header-search-exandable input[type=search] {
+  margin: 0 1rem;
+  background: $light-gray url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;
+  border: solid 1px $medium-gray;
+  padding: 9px 10px 9px 26px;
+  width: 35px;
+  border-radius: 5000px;
+  transition: all 0.5s;
+}
+
+.mmbouillon-header-search-exandable input[type=search]:focus {
+  width: 120px;
+  background-color: $white;
+  border-color: $primary-color;
+  box-shadow: 0 0 5px rgba($primary-color, 0.5);
+}
+
+.mmbouillon-header-search-exandable input:-moz-placeholder {
+  color: $dark-gray;
+}
+
+.mmbouillon-header-search-exandable input::-webkit-input-placeholder {
+  color: $dark-gray;
+}
+
+.mmbouillon-header-search-exandable input[type=search]:hover {
+  background-color: $white;
+}
+
+$menu-hover-lines-transition: all 0.35s ease;
+$menu-hover-lines-border-width: 3px;
+
+.menu-hover-lines {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: $menu-hover-lines-transition;
+
+  li a {
+    padding: 0.75rem 0;
+    color: rgba($body-font-color, 0.5);
+    position: relative;
+    margin-left: 1rem;
+  }
+
+  li:first-child a {
+    margin-left: 0;
+  }
+
+  li.active > a {
+    background-color: transparent;
+  }
+
+  a:before,
+  a::after {
+    height: $menu-hover-lines-border-width;
+    position: absolute;
+    content: '';
+    transition: $menu-hover-lines-transition;
+    background-color: $primary-color;
+    width: 0;
+  }
+
+  a::before {
+    top: 0;
+    left: 0;
+  }
+
+  a::after {
+    bottom: 0;
+    right: 0;
+  }
+
+  a:hover,
+  li.active > a {
+    color: $body-font-color;
+    transition: $menu-hover-lines-transition;
+  }
+
+  a:hover::before,
+  .active a::before,
+  a:hover::after,
+  .active a::after {
+    width: 100%;
+  }
+}
+
+
