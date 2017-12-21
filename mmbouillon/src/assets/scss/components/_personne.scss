@@ -9,10 +9,16 @@ $profile-card-about-separator-thickness: 0.125rem;
   border-radius: 0.125rem;
   box-shadow: 0 0.0625rem 0.1875rem rgba(0,0,0, 0.18), 0 0.125rem 2px rgba(0,0,0, 0.36);
 
+  .card-user-profile-img {
+    max-width: 100%;
+    opacity: 0.85;
+    transition: all 0.25s ease;
+  }
+
   .card-section {
     background-color: inherit;
     padding: 0.5rem 0 0;
-
+    
     .profile-card-header,
     .profile-card-about {
       border-bottom: .0625rem solid $medium-gray;
@@ -22,10 +28,29 @@ $profile-card-about-separator-thickness: 0.125rem;
     .profile-card-header {
       display: flex;
       align-items: flex-start;
+      position: relative;
+      
+      &::before {
+        position: absolute;
+        content: '';
+        top: rem-calc(-55);
+        left: rem-calc(-30);
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: rem-calc(55) 0 0 rem-calc(500);
+        z-index: 0;
+        border-color: transparent transparent transparent #fff;
+      }
 
       .profile-card-avatar {
         margin-right: 0.5rem;
-
+        position: absolute;
+        bottom: 100%;
+        left: 1rem;
+        z-index: 2;
+        max-width: 5.625rem;
+    
         .avatar-image {
           border-radius: 50%;
           width: rem-calc(60);

@@ -1,5 +1,15 @@
 <?php 
-$config = require 'config.php';
+$config = require 'assets/php/config.php';
+$personnes = require 'assets/php/personnes.php';
+if (isset($_REQUEST['id'])) {
+    $id = $_REQUEST['id'];
+    $personne = $personnes[$id];
+} else {
+    $personne = new Personne();
+    $personne->firstName = $config['title'];
+    $personne->gsm = $config['phone'];
+    $personne->email = $$config['email'];
+}
 ?>
 
 <?php 
@@ -9,11 +19,11 @@ header("Pragma: no-cache");
 ?>
 
 BEGIN:VCARD
-N:<?php echo $config['title'] ?>;;;;
+N:<?php echo $personne->firstName.' '.$personne->lastName ?>;;;;
 ADR;INTL;PARCEL;WORK:;;<?php $config['address']['street']; ?>;<?php $config['address']['city']; ?>;;<?php $config['address']['postalCode']; ?>;<?php $config['address']['country']; ?>;
-EMAIL;INTERNET:<?php echo $config['email']; ?>;
-ORG:<?php echo $config['title']; ?>;
-TEL;WORK:<?php echo $config['phone']; ?>;
+EMAIL;INTERNET:<?php echo $personne->email ?>;
+ORG:<?php echo $personne->firstName.' '.$personne->lastName ?>;
+TEL;WORK:<?php echo $personne->gsm ?>;
 TEL;FAX;WORK:<?php echo $config['fax']; ?>;
 URL;WORK:<?php echo $config['web']; ?>;
 CATEGORIES:Personal,Business,Family;

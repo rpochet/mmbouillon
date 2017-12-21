@@ -5,66 +5,92 @@ $personnes = require 'assets/php/personnes.php';
 
 <h3>Les médecins</h3>
 <p>Nos médecins assurent la prise en charge, en visite et en consultation, des problèmes de santé quotidiens. Ils préservent aussi la santé des patients via une information sur les risques individuels et un dépistage des signes précurseurs.</p>
-<p>Nos médecins :</p>
-<ul>
+
+<div class="row">
 <?php
 foreach ($personnes as $personne) {
     if($personne->type == 'Médecin') {
 ?>
-<li><?php echo $personne->title ?> <?php echo $personne->firstName ?> <span><?php echo $personne->lastName ?></span></li> 
-<?php
-    }
-}
-?>
-</ul>
+<div class="small-4 columns">
+<?php include('assets/php/personne.inc.php'); ?>
+</div>
 
-<p>
+<div class="small-4 columns">
+    <div class="card-user-profile">
+      <img class="card-user-profile-img" src="https://images.pexels.com/photos/5439/earth-space.jpg?h=350&auto=compress&cs=tinysrgb" alt="picture of space" />
+      <div class="card-user-profile-content card-section">
+        <div class="card-user-profile-avatar">
+          <img src="https://pbs.twimg.com/profile_images/422887689612820482/sZtHMJu5.png" alt="picture of yeti" />
+        </div>
+        <p class="card-user-profile-name">Modalités et horaires de travail</p>
+        <p class="card-user-profile-status">Toute l’activité a lieu sur rendez-vous.</p>
+        <p class="card-user-profile-info">
+            Consultations (sur rendez-vous)
+            <ul>
+            <?php
+            foreach ($personne->horaires as $horaire) {
+                if($horaire->type == 'travail') {
+                    echo '<li>'.$horaire->jour.': '.$horaire->heure_debut.': '.$horaire->heure_fin.'</li>';
+                } else if($horaire->type == 'travail') {
+                    echo '<li>'.$horaire->jour.': Absente</li>';
+                }
+            }
+            ?>
+            </ul>
+            Visites (en dehors de ces heures).
+            
+            En cas d’urgence, de problème d’horaire réel, de nécessité de temps de consultation plus long, veuillez contacter le secrétariat et leur en faire part.
+            
+            Contact pour résultats/avis : veuillez laisser vos coordonnées au secrétariat et je vous contacte dans les plus brefs délais.
+        </p>
+      </div>
+      <div class="card-user-profile-actions">
+        <a href="#" class="card-user-profile-button button hollow">Follow</a>
+        <a href="#" class="card-user-profile-button button hollow secondary">More Info</a>
+      </div>
+    </div>
+</div>
 
-<?php
-foreach ($personnes as $personne) {
-    if($personne->type == 'Médecin') {
-?>
-<h3><?php echo $personne->title ?> <?php echo $personne->firstName ?> <span><?php echo $personne->lastName ?></span></h3>
+<div class="small-4 columns">
+    <div class="card-user-profile">
+      <img class="card-user-profile-img" src="https://images.pexels.com/photos/5439/earth-space.jpg?h=350&auto=compress&cs=tinysrgb" alt="picture of space" />
+      <div class="card-user-profile-content card-section">
+        <div class="card-user-profile-avatar">
+          <img src="https://pbs.twimg.com/profile_images/422887689612820482/sZtHMJu5.png" alt="picture of yeti" />
+        </div>
+        <p class="card-user-profile-name">Prescription</p>
+        <p class="card-user-profile-status">Yeti Web Designer</p>
+        <p class="card-user-profile-info">Pour toute demande d'ordonnance, veuillez vous adresser au secrétariat.
+    Attention, ceci n’est accepté que pour les renouvellements des médicaments habituels ! Pas de nouveau traitement par téléphone.</p>
+      </div>
+    
+      <div class="card-user-profile-actions">
+        <a href="#" class="card-user-profile-button button hollow">Follow</a>
+        <a href="#" class="card-user-profile-button button hollow secondary">More Info</a>
+      </div>
+    </div>
+</div>
 
-<p>inami <?php echo $personne->extra['inami'] ?></p>
+<div class="small-4 columns">
+    <div class="card-user-profile">
+      <img class="card-user-profile-img" src="https://images.pexels.com/photos/5439/earth-space.jpg?h=350&auto=compress&cs=tinysrgb" alt="picture of space" />
+      <div class="card-user-profile-content card-section">
+        <div class="card-user-profile-avatar">
+          <img src="https://pbs.twimg.com/profile_images/422887689612820482/sZtHMJu5.png" alt="picture of yeti" />
+        </div>
+        <p class="card-user-profile-name">Prise de rendez-vous</p>
+        <p class="card-user-profile-status">Yeti Web Designer</p>
+        <p class="card-user-profile-info">Par téléphone via le secrétariat au <a href="tel:<?php echo $config['tel'] ?>"><?php echo $config['tel'] ?></a>.</p>
+      </div>
+    
+      <div class="card-user-profile-actions">
+        <a href="#" class="card-user-profile-button button hollow">Follow</a>
+        <a href="#" class="card-user-profile-button button hollow secondary">More Info</a>
+      </div>
+    </div>
+</div>
 
-<h4>Spécialités</h4>
-<p>ECG, médecin coordinateur MR/MRS, professeur de gynécologie et pharmacologie, également médecin de la police et des militaires.</p>
-
-<h4>Modalités et horaires de travail</h4>
-<p>
-Toute l’activité a lieu sur rendez-vous.
-
-Consultations (sur rendez-vous)
-<ul>
-<?php
-foreach ($personne->horaires as $horaire) {
-    if($horaire->type == 'travail') {
-        echo '<li>'.$horaire->jour.': '.$horaire->heure_debut.': '.$horaire->heure_fin.'</li>';
-    } else if($horaire->type == 'travail') {
-        echo '<li>'.$horaire->jour.': Absente</li>';
-    }
-}
-?>
-</ul>
-
-Visites (en dehors de ces heures).
-
-En cas d’urgence, de problème d’horaire réel, de nécessité de temps de consultation plus long, veuillez contacter le secrétariat et leur en faire part.
-
-Contact pour résultats/avis : veuillez laisser vos coordonnées au secrétariat et je vous contacte dans les plus brefs délais.
-</p>
-
-<h4>Prescription</h4> 
-<p>
-Pour toute demande d'ordonnance, veuillez vous adresser au secrétariat.
-Attention, ceci n’est accepté que pour les renouvellements des médicaments habituels ! Pas de nouveau traitement par téléphone.
-</p>
-
-<h4>Prise de rendez-vous</h4> 
-<p>
-Par téléphone via le secrétariat au <a href="tel:<?php echo $config['tel'] ?>"><?php echo $config['tel'] ?></a>.
-</p>
+</div>
 
 <?php
     }

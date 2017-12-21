@@ -4,32 +4,39 @@ $personnes = require 'assets/php/personnes.php';
 
 <h3>Les infirmières</h3>
 <p>Nos infirmières assurent des soins variés qui permettent aux patients de conserver au mieux leur autonomie (soins de plaies, injections, vaccinations...). Elles vous reçoivent à la Maison Médicale sur rendez-vous ou effectuent des visites à domicile.</p>
+
 <p>Nos infirmières ASD :</p>
-<ul>
-<li>Maryline GEORGES,</li> 
-<li>Emilie POLET</li>
-</ul>
+
+<div class="row">
+<?php
+foreach ($personnes as $personne) {
+    if($personne->type == 'InfirmiereASD') {
+?>
+<div class="small-4 columns">
+<?php include('assets/php/personne.inc.php'); ?>
+</div>
+<?php
+    }
+}
+?>
+</div>
+
 <p>Nos infirmières indépendantes :</p>
-<ul>
-<li>Amélie ARNOULD,</li> 
-<li>Annabelle BAIJOT,</li> 
-<li>Géraldine DANDOIS</li>
-</ul>
 
-<h4>Prestataires</h4> 
-
-Deux équipes collaborent avec la Maison Médicale :
-
-Les infirmières d’Aide et Soins à Domicile (ASD) 
-Maryline GEORGES
-Emilie POLET
-
-Les infirmières indépendantes 
-Amélie ARNOULD
-Annabelle BAIJOT
-Géraldine DANDOIS
-
-Ajouter le logo des infirmières indépendantes !
+<<img alt="Infirmières indépendantes" src="assets/img/infirmiere_independante.png" />
+<div class="row">
+<?php
+foreach ($personnes as $personne) {
+    if($personne->type == 'InfirmiereInd') {
+?>
+<div class="small-4 columns">
+<?php include('assets/php/personne.inc.php'); ?>
+</div>
+<?php
+    }
+}
+?>
+</div>
 
 <h4>Modalités et horaires de travail</h4> 
 <p>

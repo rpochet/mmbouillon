@@ -1,10 +1,5 @@
 @charset 'utf-8';
 
-@import 'components/news';
-@import 'components/menu';
-@import 'components/personne';
-@import 'components/pagination-circular';
-
 @import 'settings';
 @import 'foundation';
 @import 'motion-ui';
@@ -56,3 +51,9 @@
 
 @include motion-ui-transitions;
 @include motion-ui-animations;
+
+@import 'components/news';
+@import 'components/menu';
+@import 'components/personne';
+@import 'components/pagination-circular';
+@import 'mmbouillon';

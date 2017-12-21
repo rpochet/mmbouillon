@@ -65,7 +65,7 @@ $lastSegment = basename(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
             
               <!-- Menu -->
               <ul class="menu vertical">
-                <li><a href="absence.php"><?php echo $labels['absence.title'];?></a></li>
+                <li class="absence"><a href="absence.php"><?php echo $labels['absence.title'];?></a></li>
                 <li><a href="contact.php"><?php echo $labels['contact.title'];?></a></li>
               </ul>
             
@@ -80,7 +80,7 @@ $lastSegment = basename(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
                   </div>
                   <div class="mmbouillon-header-top-links">
                     <ul>
-                      <li><a href="absence.php"><?php echo $labels['absence.title'];?></a></li>
+                      <li class="absence"><a href="absence.php"><?php echo $labels['absence.title'];?></a></li>
                       <li><a href="contact.php"><?php echo $labels['contact.title'];?></a></li>
                     </ul>
                   </div>
@@ -91,7 +91,7 @@ $lastSegment = basename(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
                 <div class="row align-justify align-middle">
                   <div class="shrink column">
                     <ul class="vertical medium-horizontal menu menu-hover-lines">
-                      <li><a href="#"><img class="logo" src="https://placehold.it/160x50"></a></li>
+<!--                       <li><a href="#"><img class="logo" src="https://placehold.it/160x50"></a></li> -->
                       <li class="main-nav-link <?php echo ($lastSegment == 'medecin.php' ? 'active' : '');?>"><a href="medecin.php"><?php echo $labels['medecin.title'];?></a></li>
                       <li class="main-nav-link <?php echo ($lastSegment == 'infirmiere.php' ? 'active' : '');?>"><a href="infirmiere.php"><?php echo $labels['infirmiere.title'];?></a></li>
                       <li class="main-nav-link <?php echo ($lastSegment == 'psychologue.php' ? 'active' : '');?>"><a href="psychologue.php"><?php echo $labels['psychologue.title'];?></a></li>
@@ -109,20 +109,20 @@ $lastSegment = basename(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
                 </div>
               </div>
             
-              <div class="mmbouillon-header-mobile hide-for-large">
-                <div class="mmbouillon-header-mobile-left">
-                  <button class="menu-icon" type="button" data-toggle="mmbouillon-header"></button>
-                  <form class="mmbouillon-header-search-exandable">
-                    <input type="search" placeholder="Search">
-                  </form>
-                </div>
-                <div class="mmbouillon-header-mobile-center">
-                  <a href="#"><img class="logo" src="https://placehold.it/130x30"></a>
-                </div>
+<!--               <div class="mmbouillon-header-mobile hide-for-large"> -->
+<!--                 <div class="mmbouillon-header-mobile-left"> -->
+<!--                   <button class="menu-icon" type="button" data-toggle="mmbouillon-header"></button> -->
+<!--                   <form class="mmbouillon-header-search-exandable"> -->
+<!--                     <input type="search" placeholder="Search"> -->
+<!--                   </form> -->
+<!--                 </div> -->
+<!--                 <div class="mmbouillon-header-mobile-center"> -->
+<!--                   <a href="#"><img class="logo" src="https://placehold.it/130x30"></a> -->
+<!--                 </div> -->
 <!--                 <div class="mmbouillon-header-mobile-right"> -->
 <!--                   <i class="fa fa-shopping-cart"></i> -->
 <!--                 </div> -->
-              </div>
+<!--               </div> -->
             </div>
 
             <div class="row">

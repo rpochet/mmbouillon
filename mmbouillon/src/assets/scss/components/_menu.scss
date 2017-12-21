@@ -1,9 +1,13 @@
 @import 'foundation';
 
+$myblue-color: #103868;
+$cardio-color: #FF2727;
+
 .mmbouillon-header {
   width: 100%;
   background-color: $white;
-
+  font-size: 0.8em;
+  
   .logo {
     height: 50px;
     width: 160px;
@@ -58,14 +62,14 @@
   }
 
   .menu > .main-nav-link > a {
-    padding: 1.0em 0.85em 1.0em 0.85em;
+    padding: 0.85em 0.45em 0.85em 0.45em;
   }
 }
 
 
 .mmbouillon-header-top {
   width: 100%;
-  background-color: darken($dark-gray,20%);
+  background-color: $myblue-color;
   height: 40px;
   padding: 8px 20px 10px 20px;
 
@@ -91,6 +95,11 @@
   a {
     color: lighten($dark-gray, 50%);
     transition: color 0.5s ease;
+  }
+
+  li.absence a {
+    color: $cardio-color;
+    font-weight: bold;
   }
 
   a:hover {
@@ -208,7 +217,7 @@ $menu-hover-lines-border-width: 3px;
     position: absolute;
     content: '';
     transition: $menu-hover-lines-transition;
-    background-color: $primary-color;
+    background-color: $cardio-color;
     width: 0;
   }
 
