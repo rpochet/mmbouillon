@@ -4,11 +4,15 @@ class Personne
 {
     public $type;
     
+    public $title;
+    
     public $firstName;
     
     public $lastName;
     
-    public $title;
+    public $avatar;
+    
+    public $photo;
     
     public $email;
     
@@ -17,6 +21,8 @@ class Personne
     public $gsm;
     
     public $fax;
+    
+    public $facebook;
     
     public $horaires;
     
@@ -46,7 +52,7 @@ class PeriodeAgenda extends Agenda
     
     public $jour_fin;
     
-    function __construct($jour_debut, $jour_fin) 
+    function __construct($type, $jour_debut, $jour_fin) 
     {
         parent::__construct($type);
         $this->jour_debut = $jour_debut;

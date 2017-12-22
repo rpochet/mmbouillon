@@ -3,6 +3,7 @@
 <?php
 $config = require_once (dirname(__FILE__) . '{{root}}/assets/php/config.php');
 $labels = require_once (dirname(__FILE__) . '{{root}}/assets/php/labels.php');
+$offres = require_once (dirname(__FILE__) . '{{root}}/assets/php/offres.php');
 
 $lastSegment = basename(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
 
@@ -65,6 +66,7 @@ $lastSegment = basename(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
             
               <!-- Menu -->
               <ul class="menu vertical">
+                <?php if(count($offres) > 0) { ?><li class="offre"><a href="news.php"><?php echo $labels['offre.title'];?></a></li><?php } ?>
                 <li class="absence"><a href="absence.php"><?php echo $labels['absence.title'];?></a></li>
                 <li><a href="contact.php"><?php echo $labels['contact.title'];?></a></li>
               </ul>
@@ -80,6 +82,7 @@ $lastSegment = basename(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
                   </div>
                   <div class="mmbouillon-header-top-links">
                     <ul>
+                      <?php if(count($offres) > 0) { ?><li class="offre"><a href="offres.php"><?php echo $labels['offre.title'];?></a></li><?php } ?>
                       <li class="absence"><a href="absence.php"><?php echo $labels['absence.title'];?></a></li>
                       <li><a href="contact.php"><?php echo $labels['contact.title'];?></a></li>
                     </ul>
@@ -140,6 +143,14 @@ $lastSegment = basename(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
     <!-- end page wrap) -->
 
     <script src="{{root}}assets/js/app.js"></script>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.11';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
     
 </body>
 </html>

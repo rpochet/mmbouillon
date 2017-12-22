@@ -35,22 +35,23 @@
     </div>
     <div class="profile-card-action">
       <div class="action-area">
-        <a href="vCard.php?id=<?php echo $personne->id ?>" class="action-anchor has-tip bottom" data-tooltip aria-haspopup="true" data-disable-hover="false" tabindex="2" title="Ajouter à mon carnet d'adresse">
+        <a href="assets/php/vCard.php?id=<?php echo $personne->id ?>" class="action-anchor has-tip bottom" data-tooltip aria-haspopup="true" data-disable-hover="false" tabindex="2" title="Ajouter à mon carnet d'adresse">
           <i class="fas fa-address-card" aria-hidden="true"></i>
           <span class="show-for-sr">Ajouter à mon carnet d'adresse</span>
         </a>
       </div>
       <div class="action-area">
-        <a href="mail.php?id=<?php echo $personne->id ?>" class="action-anchor has-tip bottom" data-tooltip aria-haspopup="true" data-disable-hover="false" tabindex="2" title="Envoyer un message">
+        <a data-open="contact-panel-<?php echo $personne->id ?>" class="action-anchor has-tip bottom" data-tooltip aria-haspopup="true" data-disable-hover="false" tabindex="2" title="Envoyer un message">
           <i class="fas fa-envelope" aria-hidden="true"></i>
           <span class="show-for-sr">Envoyer un message</span>
         </a>
       </div>
       <div class="action-area">
-        <a href="facebook.php?id=<?php echo $personne->id ?>" class="action-anchor has-tip bottom" data-tooltip aria-haspopup="true" data-disable-hover="false" tabindex="2" title="Like">
-          <i class="fab fa-facebook-square" aria-hidden="true"></i>
-          <span class="show-for-sr">Like</span>
-        </a>
+        <div class="action-anchor has-tip bottom fb-like" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"
+           data-href="?php echo $personne->facebook ?>">
+           <i class="fab fa-facebook-square" aria-hidden="true"></i>
+           <span class="show-for-sr">Like</span>
+         </div>
       </div>
       <div class="action-area">
         <a href="tel:<?php echo $personne->gsm ?>" class="action-anchor has-tip bottom" data-tooltip aria-haspopup="true" data-disable-hover="false" tabindex="2" title="Téléphoner">
@@ -61,3 +62,5 @@
     </div>
   </div>
 </div>
+
+<?php include('assets/php/mail.inc.php'); ?>

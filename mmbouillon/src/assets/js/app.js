@@ -14,3 +14,15 @@ $(document).foundation();
 	$(this).siblings().removeClass('active');
 	$(this).addClass('active');
 });*/
+
+//closes the panel on click outside
+/*$(document).mouseup(function (e) {
+    var containers = $('.contact-panel');
+    $.each(containers, function(idx, container) {
+	    if (!container.is(e.target) // if the target of the click isn't the container...
+		  && container.has(e.target).length === 0) // ... nor a descendant of the container
+		    {
+		      container.removeClass('is-active');
+		    }
+    });
+});*/

@@ -5,7 +5,7 @@ $personnes = require 'assets/php/personnes.php';
 <h3>Les infirmières</h3>
 <p>Nos infirmières assurent des soins variés qui permettent aux patients de conserver au mieux leur autonomie (soins de plaies, injections, vaccinations...). Elles vous reçoivent à la Maison Médicale sur rendez-vous ou effectuent des visites à domicile.</p>
 
-<p>Nos infirmières ASD :</p>
+<h4>Nos infirmières ASD :</h4>
 
 <div class="row">
 <?php
@@ -21,9 +21,8 @@ foreach ($personnes as $personne) {
 ?>
 </div>
 
-<p>Nos infirmières indépendantes :</p>
+<h4>Nos infirmières indépendantes :</h4>
 
-<<img alt="Infirmières indépendantes" src="assets/img/infirmiere_independante.png" />
 <div class="row">
 <?php
 foreach ($personnes as $personne) {

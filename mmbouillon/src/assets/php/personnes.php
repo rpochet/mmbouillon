@@ -30,6 +30,7 @@ $vanizet->type = 'Médecin';
 $vanizet->title = 'Dr.';
 $vanizet->firstName = 'Vanessa';
 $vanizet->lastName = 'Anizet';
+$vanizet->email = 'maisonmedicaledebouillon@gmail.com';
 $vanizet->avatar = 'https://dummyimage.com/200x200/ccc/fff&text=Vanessa+Anizet';
 $vanizet->extra = array(
     'inami' => '1-81381-09-004'
@@ -83,6 +84,7 @@ $cdelfosse->type = 'Psychologue';
 $cdelfosse->firstName = 'Céline';
 $cdelfosse->lastName = 'Delfosse';
 $cdelfosse->avatar = 'https://dummyimage.com/200x200/ccc/fff&text=Céline+Delfosse';
+$cdelfosse->facebook = 'https://www.facebook.com/celine.delfosse.39';
 $cdelfosse->description_courte = 'psychologue, thérapeute systémique et doula';
 $cdelfosse->description = 'Psychologue clinicienne, thérapeute familiale systémique et doula: travail avec les familles, en couple ou en individuel. Soutien à la parentalité (y compris avant la naissance) ou face aux difficultés du quotidien (anxiété, dépression, difficultés relationnelles...). Facilitation de l’expression et de la régulation des émotions.';
 $cdelfosse->specialites =  array(
@@ -158,7 +160,7 @@ $abaijot->id = 'abaijot';
 $abaijot->type = 'InfirmiereInd';
 $abaijot->firstName = 'Annabelle';
 $abaijot->lastName = 'Baijot';
-$abaijot->photo = 'assets/img/infirmier_independante.png';
+$abaijot->photo = 'assets/img/infirmiere_independante.png';
 $abaijot->avatar = 'https://dummyimage.com/200x200/ccc/fff&text=Annabelle+Baijot';
 
 $gdandois = new Personne();

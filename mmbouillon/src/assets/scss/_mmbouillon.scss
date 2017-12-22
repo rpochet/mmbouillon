@@ -1,7 +1,5 @@
 @import 'foundation';
-
-$myblue-color: #103868;
-$cardio-color: #FF2727;
+@import 'components/variables';
 
 body {
     background: url('../img/logo_mmb.png') no-repeat;
