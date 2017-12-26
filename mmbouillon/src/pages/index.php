@@ -2,9 +2,7 @@
     <div class="row">
         <div class="twelve columns">
             <div id="featured">
-                <img src="images/demo1.jpg" alt="desc" /> 
-                <img src="images/demo2.jpg" alt="desc" /> 
-                <img src="images/demo3.jpg" alt="desc" />
+                <img src="<?php echo $config['photo'];?>" alt="<?php echo $labels['title'];?>" /> 
             </div>
         </div>
     </div>
@@ -15,7 +13,7 @@
     <div class="twelve columns">
         <div class="heading_dots">
             <h1 class="heading_supersize" style="margin-bottom: 10px">
-                <span class="heading_center_bg">This is Epic!</span>
+                <span class="heading_center_bg"><?php echo $labels['title'];?></span>
             </h1>
         </div>
     </div>

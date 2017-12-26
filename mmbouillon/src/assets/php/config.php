@@ -5,7 +5,7 @@ return array(
     'test_email' => 'pochet.romuald@gmail.com',
     'web' => 'http://maisonmedicalebouillon.be/',
     'avatar' => 'assets/img/logo_mmb.png',
-    'photo' => 'assets/img/police.jpg',
+    'photo' => 'assets/img/maison1.jpg',
     'tel' => '061/860.300',
     'fax' => '061/860.249',
     'tva' => '0663.551.363',
